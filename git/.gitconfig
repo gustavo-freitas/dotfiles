@@ -1,0 +1,7 @@
+[user]
+	email = gustavof@gmail.com
+	name = Gustavo Freitas
+[alias]
+    cl = clone
+	now = status
+	pom = push origin master
