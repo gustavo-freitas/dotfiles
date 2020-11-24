@@ -1,0 +1,19 @@
+# general
+auto-reload yes
+text-width 120
+
+# define
+article-sort-order date-asc
+datetime-format "%Y-%m-%d"
+
+# Format of the titles
+feedlist-title-format "%N: (%u) Feeds"
+articlelist-title-format "%N: (%u) %T [%U]"
+searchresult-title-format "%N: (%u) Search"
+filebrowser-title-format "%N: %f %?O?Open File&Save File?"
+help-title-format "%N: Help"
+selecttag-title-format "%N: Select Tag"
+selectfilter-title-format "%N: Select Filter"
+itemview-title-format "%N: %T"
+urlview-title-format "%N: URLs"
+dialogs-title-format "%N: Dialogs"
