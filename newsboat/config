@@ -6,7 +6,7 @@ text-width 120
 article-sort-order date-asc
 datetime-format "%Y-%m-%d"
 
-# Format of the titles
+# format of the titles
 feedlist-title-format "%N: (%u) Feeds"
 articlelist-title-format "%N: (%u) %T [%U]"
 searchresult-title-format "%N: (%u) Search"
@@ -17,3 +17,8 @@ selectfilter-title-format "%N: Select Filter"
 itemview-title-format "%N: %T"
 urlview-title-format "%N: URLs"
 dialogs-title-format "%N: Dialogs"
+
+# bookmarks
+bookmark-cmd ~/.newsboat/bookmark.sh
+bookmark-interactive no
+bookmark-autopilot yes
