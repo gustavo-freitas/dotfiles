@@ -45,7 +45,7 @@ bind-key G  end
 bind-key ^D halfpagedown
 bind-key ^U halfpageup
 
-# ===================== Colors (from cmus) =====================
+# ===================== Colors =====================
 color background          default   default
 color listnormal          color246  default
 color listnormal_unread   color223  default

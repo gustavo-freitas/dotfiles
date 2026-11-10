@@ -1,5 +1,5 @@
-# Newsboat feeds — generated from Firefox bookmarks (2026-11-08)
-# Format: <url> "<tag>" "~<display title>"   (press t in newsboat to filter by tag)
+# Newsboat feeds
+# Format: <url> "<tag>" "~<display title>"
 
 # --- Blogs ---
 https://world.hey.com/dhh/feed.atom "blogs" "~David Heinemeier Hansson"
