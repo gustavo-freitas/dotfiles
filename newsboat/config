@@ -4,8 +4,9 @@ refresh-on-startup  yes
 auto-reload         yes
 reload-time         60
 reload-threads      8
+cleanup-on-quit     yes
 
-# Open links in Firefox (the default is lynx, which isn't installed)
+# Open links in Firefox
 browser "firefox %u"
 
 # ===================== Reading =====================
@@ -46,10 +47,10 @@ bind-key ^U halfpageup
 
 # ===================== Colors (from cmus) =====================
 color background          default   default
-color listnormal          default   default
-color listnormal_unread   color229  default   bold
-color listfocus           color223  color237
-color listfocus_unread    color229  color237  bold
+color listnormal          color246  default
+color listnormal_unread   color223  default
+color listfocus           color246  color237
+color listfocus_unread    color223  color237
 color title               color172  color237
 color info                color66   color236
 color hint-key            color109  color236  bold

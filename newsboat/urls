@@ -7,20 +7,17 @@ https://buttondown.com/danielgalera/rss "blogs" "~Dentesguardados (Daniel Galera
 https://lethain.com/feeds/ "blogs" "~Irrational Exuberance"
 https://mattwynne.net/feed/ "blogs" "~Matt Wynne"
 https://www.ursulakleguin.com/blog?format=rss "blogs" "~Ursula K. Le Guin — Blog (archive, 2010–2017)"
-https://www.lesswrong.com/feed.xml "blogs" "~LessWrong"
+https://www.lesswrong.com/feed.xml?view=curated-rss "blogs" "~LessWrong"
 https://acoup.blog/feed/ "blogs" "~A Collection of Unmitigated Pedantry"
-
-# --- Tech ---
-https://simonwillison.net/atom/everything/ "tech" "~Simon Willison's Weblog"
-https://www.seangoedecke.com/rss.xml "tech" "~Sean Goedecke"
-https://drewdevault.com/blog/index.xml "tech" "~Drew DeVault"
-https://lucumr.pocoo.org/feed.atom "tech" "~Armin Ronacher"
-https://buttondown.com/hillelwayne/rss "tech" "~Computer Things (Hillel Wayne)"
+https://simonwillison.net/atom/entries/ "blogs" "~Simon Willison's Weblog"
+https://www.seangoedecke.com/rss.xml "blogs" "~Sean Goedecke"
+https://drewdevault.com/blog/index.xml "blogs" "~Drew DeVault"
+https://lucumr.pocoo.org/feed.atom "blogs" "~Armin Ronacher"
+https://buttondown.com/hillelwayne/rss "blogs" "~Computer Things (Hillel Wayne)"
 
 # --- Magazines ---
 filter:~/.config/newsboat/strip-enclosures.py:https://www.revistaanfibia.com/feed/ "magazines" "~Revista Anfibia"
 https://screamyell.com.br/site/feed/ "magazines" "~Scream & Yell"
-https://crimethinc.com/feed "magazines" "~CrimethInc."
 
 # --- News ---
 filter:~/.config/newsboat/strip-enclosures.py:https://www.nexojornal.com.br/rss.xml "news" "~Nexo Jornal"
