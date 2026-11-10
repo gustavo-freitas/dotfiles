@@ -1,24 +1,67 @@
-# general
-auto-reload yes
-text-width 120
+# ===================== Feeds & refresh =====================
+# Fresh articles when you open newsboat, and every hour while it's open
+refresh-on-startup  yes
+auto-reload         yes
+reload-time         60
+reload-threads      8
 
-# define
-article-sort-order date-asc
-datetime-format "%Y-%m-%d"
+# Open links in Firefox (the default is lynx, which isn't installed)
+browser "firefox %u"
 
-# format of the titles
-feedlist-title-format "%N: (%u) Feeds"
-articlelist-title-format "%N: (%u) %T [%U]"
-searchresult-title-format "%N: (%u) Search"
-filebrowser-title-format "%N: %f %?O?Open File&Save File?"
-help-title-format "%N: Help"
-selecttag-title-format "%N: Select Tag"
-selectfilter-title-format "%N: Select Filter"
-itemview-title-format "%N: %T"
-urlview-title-format "%N: URLs"
-dialogs-title-format "%N: Dialogs"
+# ===================== Reading =====================
+# ~80 characters per line: the comfortable range for long-form prose
+text-width          80
+# Keep a few lines of context above/below the cursor when scrolling
+scrolloff           5
+# Hide feeds with nothing unread (press l to toggle)
+show-read-feeds     no
+# Don't ask before marking a whole feed read (A)
+confirm-mark-feed-read no
+# After opening an article in the browser and marking it read (O), go to the next unread
+openbrowser-and-mark-jumps-to-next-unread yes
 
-# bookmarks
-bookmark-cmd ~/.newsboat/bookmark.sh
-bookmark-interactive no
-bookmark-autopilot yes
+# ===================== Lists =====================
+datetime-format     "%d %b"
+feedlist-format     "  %?U?%4U&    ?   %t"
+articlelist-format  "  %D   %?T?%-24T  ?%-18a  %t"
+
+# ===================== Keys (vim style) =====================
+# Plain j/k/g are taken by defaults (next-feed/prev-feed/sort), so free them first
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+unbind-key g
+unbind-key G
+bind-key j  down
+bind-key k  up
+bind-key J  next-feed      articlelist
+bind-key K  prev-feed      articlelist
+bind-key J  next           article
+bind-key K  prev           article
+bind-key g  home
+bind-key G  end
+bind-key ^D halfpagedown
+bind-key ^U halfpageup
+
+# ===================== Colors (from cmus) =====================
+color background          default   default
+color listnormal          default   default
+color listnormal_unread   color229  default   bold
+color listfocus           color223  color237
+color listfocus_unread    color229  color237  bold
+color title               color172  color237
+color info                color66   color236
+color hint-key            color109  color236  bold
+color hint-keys-delimiter color246  color236
+color hint-separator      color246  color236
+color hint-description    color66   color236
+color article             default   default
+color end-of-text-marker  color246  default
+
+# Article view: make the header, links and image markers easy to spot
+highlight article "^(Feed|Title|Author|Date|Link|Flags|Podcast Download URL):" color109 default bold
+highlight article "^Title:.*$"            color223  default  bold
+highlight article "https?://[^ ]+"        color66   default  underline
+highlight article "\\[[0-9]+\\]"          color172  default  bold
+highlight article "\\[image [0-9]+[^]]*\\]" color246 default
